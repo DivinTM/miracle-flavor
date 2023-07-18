@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/condact.css'%}">
+</head>
+<body>
+    <!-- page banner -->
+
+    <div class="c-banner background container" >
+        <div class="col-xl-12">
+            <h4 class="text"><b>Condact</b> </h4>
+            <ul class="text-ul">
+                <li>
+                   <a href="#"><b>Home</b></a>
+                </li>
+                <li class="li-slash">/</li>
+                <li>
+                    <b>Contact Us</b>
+                </li>
+             </ul>
+        </div>
+    </div>
+
+    <!-- page banner -->
+
+    <div class="address col-xl-12">
+        <div class="logo-add"><img src="{% static '/images/logo.png' %}" alt="" style="height: 60px; width: 110px;"></div>
+        <ul>
+            <li>
+                <img class="icon" src="{% static '/images/icon/location.png' %}" alt="">
+                Ernakulam Kerala India PIN:678543
+            </li>
+            <li>
+                <img class="icon" src="{% static '/images/icon/phone.png' %}" alt="">
+                9323256983
+            </li>
+            <li>
+                <img class="icon" src="{% static '/images/icon/email.png' %}" alt="">
+                miracleflavor123@gmail.com
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
+{% endblock content %}

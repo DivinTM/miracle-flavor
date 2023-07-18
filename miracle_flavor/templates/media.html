@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/media.css'%}">
+</head>
+<body>
+
+    <!-- page banner -->
+
+    <div class="c-banner background container" >
+        
+        <div class="col-xl-12">
+            <h4 class="text"><b>Media</b> </h4>
+            <ul class="text-ul">
+                <li>
+                   <a href="{% url 'home' %}"><b>Home</b></a>
+                </li>
+                <li class="li-slash">/</li>
+                <li>
+                    <b>Media</b>
+                </li>
+             </ul>
+        </div>
+    </div>
+
+    <!-- end page banner -->
+
+    <!-- videos -->
+
+    <div class="videoframe col-xl-12">
+        <div class="i-videoframe">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zl4wTcCPJu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
+        <div class="i-videoframe">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zl4wTcCPJu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- end videos -->
+
+    
+</body>
+</html>
+{% endblock content %}

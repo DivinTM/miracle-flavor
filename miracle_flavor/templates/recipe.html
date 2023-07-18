@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/product.css'%}">
+</head>
+<body>
+
+    <!-- page banner -->
+
+    <div class="c-banner background container" >
+        <div class="col-xl-12">
+            <h4 class="text"><b>Recipe</b> </h4>
+            <ul class="text-ul">
+                <li>
+                   <a href="{% url 'home' %}"><b>Home</b></a>
+                </li>
+                <li class="li-slash">/</li>
+                <li>
+                    <b>Recipe</b>
+                </li>
+             </ul>
+        </div>
+    </div>
+
+    <!-- end page banner -->
+
+    {% for r in recipe %}
+    <div class="i-card">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{r.recipe_image.url}}" class="card-img-top" alt="..." style:"height: 160px;">
+            <div class="card-body">
+                <h4>{{r.recipe_name}}</h4>
+              <p>{{r.recipe_making}}</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
+{% endblock content %}
